@@ -1,0 +1,349 @@
+/* style.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3f;
+            color: #fff;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 900px;
+            background-color: #ffffff;
+            color: #001f3f;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .datetime {
+            font-size: 20px;
+            text-align: center;
+        }
+.container {
+    background-color: #ffffff; /* Белый прямоугольник */
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header .logo img {
+    height: 343px;
+    margin-bottom: 10px;
+}
+.useful-links {
+    display: flex;
+    flex-wrap: wrap; /* Карточки переносятся на следующую строку */
+    justify-content: center; /* Выравнивание по центру */
+    gap: 20px; /* Отступы между карточками */
+    margin-top: 20px;
+}
+
+.link-card {
+    width: 150px; /* Фиксированная ширина карточек */
+    height: 150px; /* Фиксированная высота карточек */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #002147; /* Цвет карточек */
+    color: white; /* Цвет текста */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    text-decoration: none; /* Убираем подчеркивание */
+    text-align: center;
+    font-size: 14px;
+}
+.link-card a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок внутри карточки */
+    color: inherit; /* Оставляем цвет текста как у родителя */
+}
+
+/* Для состояния наведения */
+.link-card a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+}
+
+.link-card img {
+    max-width: 50px; /* Размер иконок */
+    margin-bottom: 10px;
+}
+
+.link-card:hover {
+    transform: scale(1.1);
+    background-color: #003366;
+}
+
+.link-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.link-card .text {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav a {
+    color: #001f3f; /* Тёмно-синий текст */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 70px;
+}
+
+.section h2 {
+    font-size: 30px;
+    border-bottom: 3px solid #001f3f;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+
+.footer {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Увеличение ширины на мобильных */
+        padding: 10px;
+    }
+
+    .header .logo img {
+        height: 100px; /* Ещё меньшее изображение */
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .link-card {
+        width: 120px; /* Уменьшение ширины на мобильных */
+        height: 120px; /* Уменьшение высоты на мобильных */
+        font-size: 12px; /* Уменьшение шрифта на мобильных */
+    }
+
+    .useful-links {
+        gap: 15px; /* Уменьшение отступов на мобильных */
+    }
+
+
+    .section h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* АНИМАЦИЯ ДЛЯ СВЕТОВОЙ ЛЕНТЫ */
+.lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    margin: -15px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .lightrope li {
+    position: relative;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 12px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 20px;
+    display: inline-block;
+    background: #00f7a5;
+    box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    -webkit-animation-name: flash-1;
+    animation-name: flash-1;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  
+  .lightrope li:nth-child(2n+1) {
+    background: cyan;
+    box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.5);
+    -webkit-animation-name: flash-2;
+    animation-name: flash-2;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+  }
+  
+  .lightrope li:nth-child(4n+2) {
+    background: #f70094;
+    box-shadow: 0px 4.66667px 24px 3px #f70094;
+    -webkit-animation-name: flash-3;
+    animation-name: flash-3;
+    -webkit-animation-duration: 1.1s;
+    animation-duration: 1.1s;
+  }
+  
+  .lightrope li:nth-child(odd) {
+    -webkit-animation-duration: 1.8s;
+    animation-duration: 1.8s;
+  }
+  
+  .lightrope li:nth-child(3n+1) {
+    -webkit-animation-duration: 1.4s;
+    animation-duration: 1.4s;
+  }
+  
+  .lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222;
+    width: 10px;
+    height: 9.33333px;
+    border-radius: 3px;
+    top: -4.66667px;
+    left: 1px;
+  }
+  
+  .lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18.66667px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+  }
+  
+  .lightrope li:last-child:after {
+    content: none;
+  }
+  
+  .lightrope li:first-child {
+    margin-left: -40px;
+  }
+  
+  @-webkit-keyframes flash-1 {
+    0%, 100% {
+      background: #00f7a5;
+      box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    }
+    50% {
+      background: rgba(0, 247, 165, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    }
+  }
+  
+  @keyframes flash-1 {
+    0%, 100% {
+      background: #00f7a5;
+      box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    }
+    50% {
+      background: rgba(0, 247, 165, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    }
+  }
+  
+  @-webkit-keyframes flash-2 {
+    0%, 100% {
+      background: cyan;
+      box-shadow: 0px 4.66667px 24px 3px cyan;
+    }
+    50% {
+      background: rgba(0, 255, 255, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
+    }
+  }
+  
+  @keyframes flash-2 {
+    0%, 100% {
+      background: cyan;
+      box-shadow: 0px 4.66667px 24px 3px cyan;
+    }
+    50% {
+      background: rgba(0, 255, 255, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
+    }
+  }
+  
+  @-webkit-keyframes flash-3 {
+    0%, 100% {
+      background: #f70094;
+      box-shadow: 0px 4.66667px 24px 3px #f70094;
+    }
+    50% {
+      background: rgba(247, 0, 148, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    }
+  }
+  
+  @keyframes flash-3 {
+    0%, 100% {
+      background: #f70094;
+      box-shadow: 0px 4.66667px 24px 3px #f70094;
+    }
+    50% {
+      background: rgba(247, 0, 148, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    }
+  }
+
+.frosted {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
