@@ -13,11 +13,12 @@
 
 ```
 📁 css/         — Website styles  
+📁 legal/       — Terms of Service and copyright documents
 📁 script/      — JavaScript files  
 📁 photo/       — Logos and images  
 📄 index.html   — Main maintenance page  
 📄 support.html — Previous support page  
-📄 none.html    — Page for those robots
+📄 none.html    — Page for those robots  
 ```
 
 ---
